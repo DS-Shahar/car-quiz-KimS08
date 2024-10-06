@@ -15,11 +15,21 @@
 		return true;
 	}
 	
-	public static int (cameraInfo[] cameras) {
+	public static int legalCities(cameraInfo[] cameras) {
 		boolean[] cities = new boolean[100];
 		for (int i=0; i < cameras.length; i++) {
 			int city = cameras[i].getCity();
-			if (cameras[i.allGood])
+			if (cameras[i].allGood == true && cities[city] == false)
+				cities[city] = false;
+			else
+				cities[city] = cameras[i].allGood();
 		}
+		int count = 0;
+		for (int i = 0; i < cities.length; i++) {
+			if (cities[i] == true)
+				count++;
+		}
+		
+		return count;
 	}
 
