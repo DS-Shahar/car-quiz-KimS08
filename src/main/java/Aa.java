@@ -19,7 +19,7 @@
 		boolean[] cities = new boolean[100];
 		for (int i=0; i < cameras.length; i++) {
 			int city = cameras[i].getCity();
-			if (cameras[i].allGood == true && cities[city] == false)
+			if (cameras[i].allGood() == true && cities[city] == false)
 				cities[city] = false;
 			else
 				cities[city] = cameras[i].allGood();
